@@ -1,0 +1,18 @@
+<!-- templates/add_note.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter une Note</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Ajouter une Note pour {{ etudiant.nom }}</h1>
+    <form method="POST">
+        <label>Note:</label>
+        <input type="number" step="0.1" name="note" required>
+        <br>
+        <input type="submit" value="Ajouter la Note">
+    </form>
+    <a href="/etudiants">Retour à la liste des étudiants</a>
+</body>
+</html>

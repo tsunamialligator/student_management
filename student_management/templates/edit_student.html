@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modifier un Étudiant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Modifier les informations de {{ etudiant.nom }}</h1>
+    <form method="POST">
+        <label>Nom: </label><input type="text" name="nom" value="{{ etudiant.nom }}" required><br>
+        <label>Âge: </label><input type="number" name="age" value="{{ etudiant.age }}" required><br>
+        <input type="submit" value="Modifier">
+    </form>
+    <a href="/etudiants">Retour à la liste des étudiants</a>
+</body>
+</html>
