@@ -13,7 +13,7 @@
             <th>Âge</th>
             <th>Notes</th>
             <th>Moyenne des Notes</th>
-            <th>Actions</th>
+            <th>Suppression</th>
         </tr>
         {% for etudiant in etudiants %}
         <tr>
@@ -38,9 +38,7 @@
             </td>
             <td>
                 <!-- Actions pour gérer les étudiants -->
-                <a href="/supprimer/{{ etudiant.id_etudiant }}">Supprimer</a>
-                <a href="/modifier/{{ etudiant.id_etudiant }}">Modifier</a>
-                <a href="/ajouter_note/{{ etudiant.id_etudiant }}">Ajouter une Note</a>
+                <a href="/supprimer/{{ etudiant.id_etudiant }}">Supprimer</a>              
             </td>
         </tr>
         {% endfor %}
