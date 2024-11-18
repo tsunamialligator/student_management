@@ -1,0 +1,132 @@
+/* Définition de la police de caractères */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #020202;
+    margin-bottom: 20px;
+}
+
+/* Style du tableau des étudiants */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+th {
+    background-color: #7de3ff;
+    color: rgb(0, 0, 0);
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Style des liens dans le tableau (actions) */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Formulaires */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Liens généraux */
+a {
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Ajouter un peu d'espace entre les éléments */
+br {
+    margin-top: 10px;
+}
+
+/* Tableaux et boutons de confirmation */
+button {
+    margin: 10px 0;
+}
+
+/* Centre les liens dans la page */
+.center-links {
+    text-align: center;  /* Centre le texte */
+    font-weight: bold;   /* Met le texte en gras */
+    margin-top: 20px;     /* Ajoute un peu d'espace au-dessus */
+}
+
+/* Style des liens dans la section de navigation */
+.center-links a {
+    color: #007BFF;       /* Couleur bleue pour les liens */
+    text-decoration: none; /* Supprime le soulignement */
+    margin: 0 15px;        /* Espace entre les liens */
+}
+
+.center-links a:hover {
+    text-decoration: underline; /* Sous-ligne au survol */
+    color: #0056b3;             /* Change la couleur au survol */
+}

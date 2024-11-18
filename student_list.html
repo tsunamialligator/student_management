@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Étudiants</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Liste des Étudiants</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Notes</th>
+            <th>Moyenne des Notes</th>
+            <th>Suppression</th>
+        </tr>
+        {% for etudiant in etudiants %}
+        <tr>
+            <td>{{ etudiant.id_etudiant }}</td>
+            <td>{{ etudiant.nom }}</td>
+            <td>{{ etudiant.age }}</td>
+            <td>
+                <!-- Affichage des notes de l'étudiant -->
+                {% if etudiant.notes %}
+                    {{ etudiant.notes | join(', ') }}
+                {% else %}
+                    Aucune note
+                {% endif %}
+            </td>
+            <td>
+                <!-- Calcul et affichage de la moyenne des notes -->
+                {% if etudiant.notes %}
+                    {{ (etudiant.notes | sum) / (etudiant.notes | length) | round(2) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+            <td>
+                <!-- Actions pour gérer les étudiants -->
+                <a href="/supprimer/{{ etudiant.id_etudiant }}">Supprimer</a>              
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>
